@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.zhalz.animalcatalog.data.Animal
 import com.zhalz.animalcatalog.databinding.ItemAnimalBinding
 
-class AnimalAdapter(private var items: List<Animal>): RecyclerView.Adapter<AnimalAdapter.ItemViewHolder>() {
+class AnimalAdapter(private var items: List<Animal>, val onItemClick : (Animal) -> Unit): RecyclerView.Adapter<AnimalAdapter.ItemViewHolder>() {
 
     inner class ItemViewHolder(var binding: ItemAnimalBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -22,5 +22,6 @@ class AnimalAdapter(private var items: List<Animal>): RecyclerView.Adapter<Anima
         holder.binding.tvTitle.text = items[position].title
         holder.binding.tvSubtitle.text = items[position].subtitle
         holder.binding.ivImage.setImageResource(items[position].image)
+        holder.itemView.setOnClickListener { onItemClick(items[position]) }
     }
 }

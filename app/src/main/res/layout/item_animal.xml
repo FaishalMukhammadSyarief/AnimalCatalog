@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="300dp"
-    app:cardUseCompatPadding="true"
-    app:rippleColor="@color/white">
+    app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,7 +21,6 @@
             android:id="@+id/tv_title"
             style="@style/TextAppearance.Title"
             android:layout_marginHorizontal="8dp"
-            android:ellipsize="end"
             android:text="@string/my_name"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -37,7 +35,7 @@
             android:layout_marginHorizontal="8dp"
             android:layout_marginBottom="12dp"
             android:ellipsize="end"
-            android:text="@string/my_birthday"
+            android:text="@string/my_email"
             android:textColor="@color/white"
 
             app:layout_constraintBottom_toBottomOf="parent"
